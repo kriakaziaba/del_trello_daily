@@ -1,0 +1,30 @@
+group 'trello'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.7'
+    compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
+}
+
+
+sourceSets {
+    main {
+        groovy {
+            srcDir 'src/main'
+        }
+    }
+}
+
+    task runScript (dependsOn: 'classes', type: JavaExec) {
+    main = 'dailyReport'
+    classpath = sourceSets.main.runtimeClasspath
+}
