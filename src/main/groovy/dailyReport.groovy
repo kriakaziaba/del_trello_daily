@@ -1,7 +1,11 @@
+@Grab(group='org.codehaus.groovy.modules.http-builder', module='http-builder', version='0.7.1' )
+
+import groovyx.net.http.RESTClient
+
 /**
  * Created by DiR on 31.08.2016.
  */
-import groovyx.net.http.RESTClient
+
 
 //f742b27417858c53a1758c29a694f0f8
 //auth
