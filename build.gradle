@@ -2,9 +2,6 @@ group 'trello'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'groovy'
-apply plugin: 'idea'
-apply plugin: 'java'
-apply plugin: 'maven'
 
 sourceCompatibility = 1.8
 
@@ -16,6 +13,7 @@ repositories {
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.7'
     compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
+    compile 'oauth.signpost:signpost-core:1.2.1.2'
 }
 
 task runScript (dependsOn: 'classes', type: JavaExec) {
